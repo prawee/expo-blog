@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, Text, StyleSheet, FlatList } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Button } from 'react-native'
 import BlogContext from '../context/BlogContext'
 
 const IndexScreen = () => {
@@ -8,6 +8,7 @@ const IndexScreen = () => {
   return (
     <View>
       <Text>Index Screen</Text>
+      <Button title="Add Post" />
       <FlatList 
         data={blogPosts}
         keyExtractor={blogPost => blogPost.title}
