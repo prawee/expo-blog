@@ -10,7 +10,9 @@ const blogReducer = (state, action) => {
         ...state, 
         { 
           id: Math.floor(Math.random() * 9999),
-          title: `Blog Post #${state.length + 1}`
+          // title: `Blog Post #${state.length + 1}`
+          title: action.payload.title,
+          content: action.payload.content
         }
       ]
     default:
