@@ -26,7 +26,7 @@ const addBlogPost = (dispatch) => {
 
 const deleteBlogPost = dispatch => {
   return (id) => {
-    dispatch({ type: 'delete_blogpost', playload: id })
+    dispatch({ type: 'delete_blogpost', payload: id })
   }
 }
 
