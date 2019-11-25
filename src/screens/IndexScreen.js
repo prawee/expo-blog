@@ -5,7 +5,7 @@ import { Feather } from '@expo/vector-icons'
 
 const IndexScreen = () => {
   // const blogPosts = useContext(BlogContext)
-  const { state, addBlogPost } = useContext(Context)
+  const { state, addBlogPost, deleteBlogPost } = useContext(Context)
 
   return (
     <View>
