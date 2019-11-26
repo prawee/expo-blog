@@ -9,6 +9,15 @@ const IndexScreen = ({ navigation }) => {
 
   useEffect(() => {
     getBlogPosts()
+
+    // fixed when data changed
+    const listener = navigation.addListener('didFocus', () => {
+      getBlogPosts()
+    })
+
+    return () => {
+      listener.remove()
+    }
   }, [])
 
   return (
