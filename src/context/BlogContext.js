@@ -28,7 +28,7 @@ const blogReducer = (state, action) => {
   }
 }
 
-const getBlogPost = dispatch => {
+const getBlogPosts = dispatch => {
   return async () => {
     const response = await jsonServer.get('/blogposts')
     // response.data === [{}, {}]
@@ -62,6 +62,6 @@ const editBlogPost = dispatch => {
 
 export const { Context, Provider } = createDataContext(
   blogReducer, 
-  { addBlogPost, deleteBlogPost, editBlogPost }, 
+  { addBlogPost, deleteBlogPost, editBlogPost, getBlogPosts }, 
   [{ id: 1, title: 'TEST POST', content: 'TEST CONTENT'}]
 )
